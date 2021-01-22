@@ -27,8 +27,9 @@ petsRouter
       const adoptedDog = Pets.dequeue('dogs').name;
       message = `Thank you, ${ adopter }, for adopting ${ adoptedCat }, the cat and ${ adoptedDog }, the dog!`
     } else {
+      const editedType = type.slice(0, -1);
       const adopted = Pets.dequeue(type).name;
-      message = `Thank you, ${ adopter }, for adopting ${ adopted }!`;
+      message = `Thank you, ${ adopter }, for adopting ${ adopted }, the ${ editedType }!`;
     }
     const topPets = Pets.getTopValue();
     console.log(topPets, message);
