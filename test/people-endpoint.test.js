@@ -20,5 +20,21 @@ describe('People endpoint', function() {
         .send({ name })
         .expect(201, { person: name })
     })
+    it ('responds with 400 when name is not supplied', () => {
+      return supertest(app)
+        .post('/api/people')
+        .expect(400, { error: {
+        message: 'Name must be included in the request body - name: personName'
+      }})
+    })
+    it ('responds with 400 when name has characters other than letters and spaces', () => {
+      const name = 'S0mething-wr0ng'
+      return supertest(app)
+        .post('/api/people')
+        .send({ name })
+        .expect(400, { error: {
+        message: 'Name must only be letters and spaces'
+      }})
+    })
   })
 })

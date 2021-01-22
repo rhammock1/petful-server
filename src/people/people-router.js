@@ -13,6 +13,16 @@ peopleRouter
   })
   .post(jsonParser, (req, res, next) => {
     const { name } = req.body;
+    if (!name) {
+      return res.status(400).json({ error: {
+        message: 'Name must be included in the request body - name: personName'
+      }});
+    }
+    if (!(/^[A-Za-z\s]+$/.test(name))) {
+      return res.status(400).json({ error: {
+        message: 'Name must only be letters and spaces'
+      }});
+    }
     const person = People.enqueue(name);
     res.status(201).json({ person });
   })
