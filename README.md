@@ -7,12 +7,12 @@ All endpoints are open
 
 #### URL: PRODUCTION URL GO HERE
 
-##### Endpoints:
+#### Endpoints:
 
 /api/pets
 /api/people
 
-###### GET /api/pets
+#### GET /api/pets
 Sample Response: 200 ok
 ```
 {
@@ -39,7 +39,7 @@ Sample Response: 200 ok
 }
 ```
 
-###### DELETE /api/pets
+#### DELETE /api/pets
 Sample Request: include type in request body.
 
 Type should equal either cats, dogs, or both
@@ -78,7 +78,7 @@ Response includes the next pets at the top of the queue and a message to display
 }
 ```
 
-###### GET /api/people
+#### GET /api/people
 Sample Response: 200 ok
 ```
 {
