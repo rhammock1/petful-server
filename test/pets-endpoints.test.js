@@ -13,4 +13,13 @@ describe('Pets endpoint', function() {
         .expect(200, { topPets })
     })
   })
+  describe('DELETE /api/pets', () => {
+    it ('responds with 204', () => {
+      const type = 'cats';
+      return supertest(app)
+        .delete('/api/pets')
+        .send(type)
+        .expect(204)
+    })
+  })
 })
