@@ -11,5 +11,10 @@ peopleRouter
     const topPerson = People.getTopValue();
     res.status(200).json({ topPerson });
   })
+  .post(jsonParser, (req, res, next) => {
+    const { name } = req.body;
+    const person = People.enqueue(name);
+    res.status(201).json({ person });
+  })
 
   module.exports = peopleRouter;
