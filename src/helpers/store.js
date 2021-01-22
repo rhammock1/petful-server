@@ -6,10 +6,6 @@ const maleNames = ['Rocko', 'Max', 'Buddy', 'Roscoe', 'Charlie', 'Kevin', 'Lucky
 const femaleNames = ['Bella', 'Lucy', 'Polly', 'Nahla', 'Jasmine', 'Daisy', 'Ginger', 'Coco', 'Sasha', 'Lola'];
 // femaleNames[Math.floor(Math.random() * femaleNames.length)];
 
-const thankYouMeme = {
-  imageURL: 'https://i.redd.it/ne17uc446c051.jpg'
-};
-
 const stories = ['They were thrown on the street', 'They were left behind when the previous owner moved', 'Previous owner passed away and the family couldn\'t keep them', 'Couldn\'t keep them becuase there were too many pets in the household', 'The previous owner did not have enough time for them', 'Someone in the previous owner\'s family was allergic', 'They were found sleeping on the street and eating scraps', 'The previous owner moved and the new landlord did not allow pets', 'The owner could not afford to keep them', 'They got sick and the owner couldn\'t continue to care for them'];
 
 const cats = [
@@ -126,4 +122,4 @@ const people = [
   'Joe Shmoe'
 ];
 
-module.exports = { cats, dogs, people, thankYouMeme };
+module.exports = { cats, dogs, people };

@@ -10,7 +10,9 @@ people.forEach((person) => peopleInLine.enqueue(person));
 const getTopValue = function() {
   return peopleInLine.displayTop();
 };
-
+const getAllValue = function() {
+  return peopleInLine.displayAll();
+}
 const enqueue = function(person) {
   return peopleInLine.enqueue(person);
 };
@@ -21,6 +23,7 @@ const dequeue = function() {
 
 module.exports = {
   getTopValue,
+  getAllValue,
   enqueue,
   dequeue,
 };

@@ -9,7 +9,8 @@ peopleRouter
   .route('/')
   .get((req, res, next) => {
     const person = People.getTopValue();
-    res.status(200).json({ person });
+    const people = People.getAllValue();
+    res.status(200).json({ person, people });
   })
   .post(jsonParser, (req, res, next) => {
     const { name } = req.body;
