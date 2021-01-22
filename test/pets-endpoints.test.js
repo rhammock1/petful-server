@@ -14,12 +14,12 @@ describe('Pets endpoint', function() {
     })
   })
   describe('DELETE /api/pets', () => {
-    it ('responds with 204', () => {
+    it ('responds with 200', () => {
       const type = 'cats';
       return supertest(app)
         .delete('/api/pets')
-        .send(type)
-        .expect(204)
+        .send({ type })
+        .expect(200)
     })
   })
 })

@@ -16,8 +16,8 @@ const cats = [
   {
     imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
     imageDescription: 'Orange bengal cat with black stripes lounging on concrete.',
-    name: femaleNames[Math.floor(Math.random() * femaleNames.length)],
-    sex: 'Female',
+    name: maleNames[Math.floor(Math.random() * maleNames.length)],
+    sex: 'Male',
     age: 2,
     breed: 'Bengal',
     story: stories[Math.floor(Math.random() * stories.length)]
@@ -25,8 +25,8 @@ const cats = [
   {
     imageURL:'https://static.scientificamerican.com/sciam/cache/file/32665E6F-8D90-4567-9769D59E11DB7F26_source.jpg?w=590&h=800&7E4B4CAD-CAE1-4726-93D6A160C2B068B2', 
     imageDescription: 'Tan Domestic Long Hair cat sticking his tongue out.',
-    name: maleNames[Math.floor(Math.random() * maleNames.length)],
-    sex: 'Male',
+    name: femaleNames[Math.floor(Math.random() * femaleNames.length)],
+    sex: 'female',
     age: 3,
     breed: 'Domestic Long Hair',
     story: stories[Math.floor(Math.random() * stories.length)]
@@ -34,15 +34,6 @@ const cats = [
   {
     imageURL:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlNyI5Bbsl1vq1BQjH9XA-Z4j0Kkk0cEpAnA&usqp=CAU', 
     imageDescription: 'White Domestic Short Hair cat with Heterochromia Iridis',
-    name: femaleNames[Math.floor(Math.random() * femaleNames.length)],
-    sex: 'Female',
-    age: 1,
-    breed: 'Domestic Short Hair',
-    story: stories[Math.floor(Math.random() * stories.length)]
-  },
-  {
-    imageURL:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjOQPpkOjhrAgg8hrhisEqOf-Cpbi9fYTRDA&usqp=CAU', 
-    imageDescription: 'Adorable short hair kitten missing an eye',
     name: maleNames[Math.floor(Math.random() * maleNames.length)],
     sex: 'Male',
     age: 1,
@@ -50,10 +41,19 @@ const cats = [
     story: stories[Math.floor(Math.random() * stories.length)]
   },
   {
+    imageURL:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjOQPpkOjhrAgg8hrhisEqOf-Cpbi9fYTRDA&usqp=CAU', 
+    imageDescription: 'Adorable short hair kitten missing an eye',
+    name: femaleNames[Math.floor(Math.random() * femaleNames.length)],
+    sex: 'female',
+    age: 1,
+    breed: 'Domestic Short Hair',
+    story: stories[Math.floor(Math.random() * stories.length)]
+  },
+  {
     imageURL:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM44430OV4S8zI71m_HHhsZRILQ73p4NjH7A&usqp=CAU', 
     imageDescription: 'Grey kitty waiting longingly to be adopted ',
-    name: femaleNames[Math.floor(Math.random() * femaleNames.length)],
-    sex: 'Female',
+    name: maleNames[Math.floor(Math.random() * maleNames.length)],
+    sex: 'Male',
     age: 5,
     breed: 'Chartreux',
     story: stories[Math.floor(Math.random() * stories.length)]
@@ -91,8 +91,8 @@ const dogs = [
   {
     imageURL:'https://www.pitbullinfo.org/uploads/7/8/9/7/7897520/pitbull-dog-1_2_orig.jpg', 
     imageDescription: 'Friendly pitbull smiling',
-    name: maleNames[Math.floor(Math.random() * maleNames.length)],
-    sex: 'Male',
+    name: femaleNames[Math.floor(Math.random() * femaleNames.length)],
+    sex: 'female',
     age: 4,
     breed: 'Pit Bull',
     story: stories[Math.floor(Math.random() * stories.length)]
