@@ -1,3 +1,5 @@
+'use strict';
+
 const app = require('./app');
 const {PORT} = require('./config');
 const MODE = process.env.NODE_ENV;
