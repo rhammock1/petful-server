@@ -1,3 +1,4 @@
+const { ieNoOpen } = require('helmet');
 const supertest = require('supertest');
 const app = require('../src/app');
 const { testPeople } = require('./test-helpers');
@@ -9,6 +10,15 @@ describe('People endpoint', function() {
       return supertest(app)
         .get('/api/people')
         .expect(200, { person })
+    })
+  })
+  describe('POST /api/people', () => {
+    it ('responds with 201 and the name of the person added', () => {
+      const name = 'Little John';
+      return supertest(app)
+        .post('/api/people')
+        .send({ name })
+        .expect(201, { person: name })
     })
   })
 })
