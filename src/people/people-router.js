@@ -8,8 +8,8 @@ const People = require('./people-service');
 peopleRouter
   .route('/')
   .get((req, res, next) => {
-    const topPerson = People.getTopValue();
-    res.status(200).json({ topPerson });
+    const person = People.getTopValue();
+    res.status(200).json({ person });
   })
   .post(jsonParser, (req, res, next) => {
     const { name } = req.body;
