@@ -11,7 +11,7 @@ petsRouter
   .route('/')
   .get((req, res, next) => {
     const topPets = Pets.getTopValue();
-    res.status(200).json(topPets);
+    res.status(200).json({ topPets });
   })
 
 module.exports = petsRouter;

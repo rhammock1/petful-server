@@ -9,6 +9,7 @@ require('dotenv').config();
 
 const app = express();
 const petsRouter = require('./pets/pets-router');
+const peopleRouter = require('./people/people-router');
 
 const morganOption = (NODE_ENV === 'production') ? 'tiny' : 'common';
 
@@ -17,6 +18,7 @@ app.use(helmet());
 app.use(cors());
 
 app.use('/api/pets', petsRouter);
+app.use('/api/people', peopleRouter);
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
