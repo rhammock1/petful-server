@@ -22,4 +22,9 @@ const dequeue = function(type) {
   return pets[`${type}`].dequeue();
 };
 
-module.exports = { getTopValue, dequeue };
+const enqueue = function(type, value) {
+  console.log(type, value);
+  return pets[`${type}`].enqueue(value);
+}
+
+module.exports = { getTopValue, dequeue, enqueue };

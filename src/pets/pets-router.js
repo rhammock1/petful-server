@@ -23,13 +23,16 @@ petsRouter
       }});
     }
     if (type === 'both') {
-      const adoptedCat = Pets.dequeue('cats').name;
-      const adoptedDog = Pets.dequeue('dogs').name;
-      message = `Thank you, ${ adopter }, for adopting ${ adoptedCat }, the cat and ${ adoptedDog }, the dog!`
+      const adoptedCat = Pets.dequeue('cats');
+      const adoptedDog = Pets.dequeue('dogs');
+      Pets.enqueue('cats', adoptedCat);
+      Pets.enqueue('dogs', adoptedDog);
+      message = `Thank you, ${ adopter }, for adopting ${ adoptedCat.name }, the cat and ${ adoptedDog.name }, the dog!`
     } else {
       const editedType = type.slice(0, -1);
-      const adopted = Pets.dequeue(type).name;
-      message = `Thank you, ${ adopter }, for adopting ${ adopted }, the ${ editedType }!`;
+      const adopted = Pets.dequeue(type);
+      Pets.enqueue(type, adopted);
+      message = `Thank you, ${ adopter }, for adopting ${ adopted.name }, the ${ editedType }!`;
     }
     const topPets = Pets.getTopValue();
     console.log(topPets, message);
