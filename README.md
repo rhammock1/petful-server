@@ -2,10 +2,10 @@
 
 ### Thinkful DSA practice full stack project using Queues
 
+### Stack Used: React, Node, and Express
+
 ### Documentation
 All endpoints are open
-
-#### URL: PRODUCTION URL GO HERE
 
 #### Endpoints:
 
