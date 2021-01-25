@@ -1,5 +1,8 @@
 # DSA Petful
 
+Hosted [Here](https://petful-client-eosin.vercel.app/)
+Client Repo [Here](https://github.com/rhammock1/petful-server/)
+
 ### Thinkful DSA practice full stack project using Queues
 
 ### Stack Used: React, Node, and Express
